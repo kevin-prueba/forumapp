@@ -1,0 +1,10 @@
+<div class="container">
+  
+  <% topics.each do |topic| %>
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <a href="/topics/<%= topic.id %>"><%= topic.title %></a>
+      </div>
+    </div>
+  <% end %>
+</div>

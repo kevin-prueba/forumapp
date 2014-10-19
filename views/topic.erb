@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="page-header">
+    <h1><%= topic.title %></h1>
+  </div>
+  <%= topic.body %>
+  
+  <br>
+  <form method="post" action="/topics/<%= topic.id %>/comment">
+    <textarea name="body" class="form-control"></textarea>
+    <br>
+    <button type="submit" class="btn btn-success">Comentar</button>
+  </form>
+  <br>
+  
+  
+  <% topic.comments.each do |comment| %>
+    <p><%= comment.body %></p>
+  <% end %>
+</div>
